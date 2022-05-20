@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>E:\4to semestre en línea\Gráficas computacionales II (GCII)\TerrenoSkyBillModGC2\x64\Debug\TerrenoSkyBill.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>E:\4to semestre en línea\Gráficas computacionales II (GCII)\TerrenoSkyBillModGC2\x64\Debug\Billboard.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>E:\4to semestre en línea\Gráficas computacionales II (GCII)\TerrenoSkyBillModGC2\x64\Debug\Hologram.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>E:\4to semestre en línea\Gráficas computacionales II (GCII)\TerrenoSkyBillModGC2\x64\Debug\Modelo.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>E:\4to semestre en línea\Gráficas computacionales II (GCII)\TerrenoSkyBillModGC2\x64\Debug\Water.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

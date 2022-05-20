@@ -1,0 +1,22 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Terreno.vcxproj, TerrenoSky.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+E:\4to semestre en l�nea\Gr�ficas computacionales II (GCII)\TerrenoSkyBillModGC2\v1dx11rr\Billboard.hlsl(74,10-47): warning X3206: implicit truncation of vector type
+  
+  compilation object save succeeded; see E:\4to semestre en línea\Gráficas computacionales II (GCII)\TerrenoSkyBillModGC2\x64\Debug\Billboard.cso
+E:\4to semestre en l�nea\Gr�ficas computacionales II (GCII)\TerrenoSkyBillModGC2\v1dx11rr\Hologram.fx(66,27-57): warning X3206: 'mul': implicit truncation of vector type
+E:\4to semestre en l�nea\Gr�ficas computacionales II (GCII)\TerrenoSkyBillModGC2\v1dx11rr\Hologram.fx(66,2-58): warning X3206: implicit truncation of vector type
+  
+  compilation object save succeeded; see E:\4to semestre en línea\Gráficas computacionales II (GCII)\TerrenoSkyBillModGC2\x64\Debug\Hologram.cso
+E:\4to semestre en l�nea\Gr�ficas computacionales II (GCII)\TerrenoSkyBillModGC2\v1dx11rr\Modelo.fx(83,27-57): warning X3206: 'mul': implicit truncation of vector type
+E:\4to semestre en l�nea\Gr�ficas computacionales II (GCII)\TerrenoSkyBillModGC2\v1dx11rr\Modelo.fx(83,2-58): warning X3206: implicit truncation of vector type
+E:\4to semestre en l�nea\Gr�ficas computacionales II (GCII)\TerrenoSkyBillModGC2\v1dx11rr\Modelo.fx(91,2-28): warning X3206: implicit truncation of vector type
+E:\4to semestre en l�nea\Gr�ficas computacionales II (GCII)\TerrenoSkyBillModGC2\v1dx11rr\Modelo.fx(108,8-44): warning X3206: implicit truncation of vector type
+E:\4to semestre en l�nea\Gr�ficas computacionales II (GCII)\TerrenoSkyBillModGC2\v1dx11rr\Modelo.fx(115,9-46): warning X3206: implicit truncation of vector type
+  
+  compilation object save succeeded; see E:\4to semestre en línea\Gráficas computacionales II (GCII)\TerrenoSkyBillModGC2\x64\Debug\Modelo.cso
+E:\4to semestre en l�nea\Gr�ficas computacionales II (GCII)\TerrenoSkyBillModGC2\v1dx11rr\Water.fx(92,27-57): warning X3206: 'mul': implicit truncation of vector type
+E:\4to semestre en l�nea\Gr�ficas computacionales II (GCII)\TerrenoSkyBillModGC2\v1dx11rr\Water.fx(92,2-58): warning X3206: implicit truncation of vector type
+E:\4to semestre en l�nea\Gr�ficas computacionales II (GCII)\TerrenoSkyBillModGC2\v1dx11rr\Water.fx(97,2-28): warning X3206: implicit truncation of vector type
+E:\4to semestre en l�nea\Gr�ficas computacionales II (GCII)\TerrenoSkyBillModGC2\v1dx11rr\Water.fx(119,9-47): warning X3206: implicit truncation of vector type
+  
+  compilation object save succeeded; see E:\4to semestre en línea\Gráficas computacionales II (GCII)\TerrenoSkyBillModGC2\x64\Debug\Water.cso
+  v1dx11rr.vcxproj -> E:\4to semestre en línea\Gráficas computacionales II (GCII)\TerrenoSkyBillModGC2\x64\Debug\TerrenoSkyBill.exe

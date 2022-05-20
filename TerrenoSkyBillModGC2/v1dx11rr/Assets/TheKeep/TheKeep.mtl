@@ -1,0 +1,15 @@
+# Blender MTL File: 'The Keep.blend'
+# Material Count: 1
+
+newmtl Blocks
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump E:\\4to semestre en línea\\Gráficas computacionales II (GCII)\\TerrenoSkyBillModGC2\\v1dx11rr\\4to semestre en línea\\Gráficas computacionales II (GCII)\\Textures\\The Keep\\KeepNorText.png
+map_Kd E:\\4to semestre en línea\\Gráficas computacionales II (GCII)\\TerrenoSkyBillModGC2\\v1dx11rr\\4to semestre en línea\\Gráficas computacionales II (GCII)\\Textures\\The Keep\\KeepDiffText.png
+map_Ns E:\\4to semestre en línea\\Gráficas computacionales II (GCII)\\TerrenoSkyBillModGC2\\v1dx11rr\\4to semestre en línea\\Gráficas computacionales II (GCII)\\Textures\\The Keep\\KeepRoughText.png
