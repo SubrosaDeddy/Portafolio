@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3L Software & Services</title>
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/detalle-vacante.css" as="style">
+    <link rel="stylesheet" href="css/detalle-vacante.css">
+
+</head>
+<body>
+    
+    <div class="tabs">
+        <a href="index.html" class="tab-3">
+            <h1 class="titulo">M3L</h1>
+        </a>
+
+        <div class="tab-4">
+            <label for="tab4-1" id="position-path">Oferta/Development/Director de ch...</label>
+            <input id="tab4-1" name="tabs-two" type="radio" checked="checked">
+            <div>
+                <main class="contenedor">
+                    <!-- <h2>Director de chalanería</h2> -->
+                    <h2 id="position-title"></h2>
+                    <div class="detalle-puesto sombra-blanca">
+                        <h4>Detalles</h4>
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras blandit tincidunt sapien, in consectetur odio ultrices in. Morbi lacinia urna eu risus dapibus rutrum. Aenean laoreet varius augue, non aliquam lacus ornare in. Nam volutpat eget diam vitae eleifend. Phasellus feugiat odio cursus tristique porttitor. Ut fermentum, enim at consequat aliquet, orci lorem finibus quam, eu pellentesque risus arcu et turpis. Ut pulvinar ac ante eget tristique. Quisque id consequat velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras arcu massa, tincidunt luctus est sit amet, pretium pharetra diam. Suspendisse ut ultrices neque, et venenatis odio.</p> -->
+                        <p id="position-detail"></p>
+                        <section class="summary-vacante" id="summary-vacante">
+                            <div class="puesto-idioma">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#5c8fa3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M5 7h7m-2 -2v2a5 8 0 0 1 -5 8m1 -4a7 4 0 0 0 6.7 4" />
+                                    <path d="M11 19l4 -9l4 9m-.9 -2h-6.2" />
+                                </svg>
+                                <p id="position-languages">Español, Inglés</p>
+                            </div>
+                
+                            <div class="puesto-direccion">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" width="36" height="36" viewBox="0 0 24 24" stroke-width="2.5" stroke="#B30000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <line x1="18" y1="6" x2="18" y2="6.01" />
+                                    <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+                                    <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+                                    <line x1="9" y1="4" x2="9" y2="17" />
+                                    <line x1="15" y1="15" x2="15" y2="20" />
+                                  </svg>
+                                <p id="position-location">A 5 minutos del centro de Monterrey</p>
+                            </div>
+                
+                            <div class="puesto-sueldo">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cash" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2E8B57" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <rect x="7" y="9" width="14" height="10" rx="2" />
+                                    <circle cx="14" cy="14" r="2" />
+                                    <path d="M17 9v-2a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h2" />
+                                </svg>
+                                <!-- <p>15,000-25,000 MXN</p> -->
+                                <p id="position-salary"></p>
+                            </div>
+                        </section>
+                        
+                        <h4>Requisitos</h4>
+                        <div class="requisitos">
+                            
+                            <div class="requisitos-labels">
+                                <h5 class="descripcion">Descripción</h5> <h5 class="experiencia-minima">Experiencia deseada</h5> <h5 class="experiencia-input">Su experiencia</h5>
+                            </div>
+                            
+                            <form action="" class="form-requisitos" id="requirements-form">
+                                <!-- <div class="requisito-element">    
+                                    <p class="descripcion-element">Praesent tortor urna, tempor nec mollis sit amet, dignissim id augue. Vivamus vel consequat mi, eget mollis quam. Integer sed eleifend lorem</p> 
+                                    <p class="xp-element">5 años</p> 
+                                    <input type="text" class="sombra-blanca input-element">
+                                </div> -->
+                            </form>
+
+                            <div id="progressbar">
+                                <div id="percent" percent = "0"></div>
+                            </div>
+
+                            <h4>O envíe su CV</h4>
+                            <div class="choose-file">
+                                <form action="/action_page.php" class="form-file" id="load-file">
+                                    <input type="file" id="myFileCV" name="filename" class="myFileCV">
+                                    <!-- <input type="submit"> -->
+                                </form>
+                            </div>
+                            <button id="btn-enviar" class="btn-enviar" type="button">Enviar</button>
+                            <!-- <hr class="hr-send" id="hr-send"> -->
+                        </div>
+                    </div> 
+                </main>
+            </div>
+        </div>
+
+        <div class="tab-4">
+            <label for="tab4-2">Contacto</label>
+            <input id="tab4-2" name="tabs-two" type="radio">
+            <div>
+                <h4>Contacto</h4>
+                <p>Quisque sit amet turpis leo. Maecenas sed dolor mi. Pellentesque varius elit in neque ornare commodo ac non tellus. Mauris id iaculis quam. Donec eu felis quam. Morbi tristique lorem eget iaculis consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean at tellus eget risus tempus ultrices. Nam condimentum nisi enim, scelerisque faucibus lectus sodales at.</p>
+            </div>
+        </div>
+
+        <div class="tab-4">
+            <label for="tab4-3">Nosotros</label>
+            <input id="tab4-3" name="tabs-two" type="radio">
+            <div class="maintenance sombra-blanca">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mood-sad" width="500" height="500" viewBox="0 0 24 24" stroke-width="3" stroke="#3b4994" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="9" />
+                    <line x1="9" y1="10" x2="9.01" y2="10" />
+                    <line x1="15" y1="10" x2="15.01" y2="10" />
+                    <path d="M9.5 15.25a3.5 3.5 0 0 1 5 0" />
+                </svg>
+                <h2>Oops... Parece que por el momento ésta función no está disponible :(</h2>
+            </div>
+        </div>
+
+        <div class="tab-4">
+            <label for="tab4-4" id="user-top-label">Iniciar sesión</label>
+            <input id="tab4-4" name="tabs-two" type="radio">
+            <div class="user sombra-blanca">
+                <h2 class="logIn">Inicia sesión</h2>
+                <form action="" id="login-form" class="logIn">
+                    <label for="login-username">Email</label><input type="email" id="login-email">
+                    <label for="login-password">Contraseña</label><input type="password" id="login-pass">
+                    <br><br>
+                    <button id="btn-login" type="button">Iniciar sesión</button>
+                </form>
+
+                <hr class="signIn">
+                <h2 class="signIn">¿No estás registrado?</h2>
+                <h2 class="signIn">Crea una cuenta</h2>
+                <form action="php/InsertUser.php" id="signup-form" class="signIn">   
+                    <label for="signup-username">Nombre de usuario</label>
+                    <input type="text" id="signupUsername" name="username"><span class="error-mark error" id="error-user">*</span>
+                    
+                    <label for="signup-email">Correo electrónico</label>
+                    <input type="text" id="signupEmail" name="email"><span class="error-mark error" id="error-email">*</span>
+                    
+                    <label for="signup-password">Contraseña</label>
+                    <input type="password" id="signupPassword" name="password"><span class="error-mark error" id="error-password">*</span>
+                    
+                    <label for="signup-birthdate">Fecha de nacimiento</label>
+                    <input type="text" id="datepicker">
+                    
+                    <br><br>
+                    <button id="signup-btn" type="submit">Registrarse</button>
+                    <p id="error-user-length" class="error">El nombre de usuario debe ser de al menos 8 caracteres</p>
+                    <p id="error-password-length" class="error">La contraseña debe ser de al menos 8 caracteres</p>
+                    <p id="error-password-uppercase" class="error">La contraseña debe contener al menos una mayúscula</p>
+                    <p id="error-password-sc" class="error">La contraseña debe contener al menos un caracter especial</p>
+                    <p id="error-email-format" class="error">El formato del correo es inválido</p>
+                </form>
+
+
+                <h3 class="signOut" id="signedInUsername">Usuario</h3>
+                <h3 class="signOut" id="signedInEmail">Correo electrónico</h3>
+                <br class="signOut">
+                <br class="signOut">
+                <button class="signOut" id="signOutBtn">Cerrar sesión</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>M3L S.A. DE C.V.</p>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js" type="text/javascript"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js" type="text/javascript"></script>  
+    
+    <link rel="stylesheet" href="https://unpkg.com/intro.js/minified/introjs.min.css">
+    <script type="text/javascript" src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+    
+    <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+    <!-- <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script> -->
+    <!-- <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script> -->
+    
+    <script type="text/javascript" src="js/detalle-vacante.js"></script>
+    <script type="text/javascript" src="js/SignUp.js"></script>
+</body>
+</html>

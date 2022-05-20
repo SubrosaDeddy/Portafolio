@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3L Software & Services</title>
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/index.css" as="style">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    
+    
+    <div class="tabs">
+        <a href="index.html" class="tab-3">
+            <h1 class="titulo">M3L</h1>
+        </a>
+
+        <div class="tab-4">
+            <label for="tab4-1">Oferta</label>
+            <input id="tab4-1" name="tabs-two" type="radio" checked="checked">
+            <div>
+                <div class="hero">
+                    <img src="img/hero.jpg" alt="Hero">
+                </div>
+                <main class="contenedor">
+                    <h2>Únete a nosotros</h2>
+                    <div class="job-offers" id="offers-container">
+                        <!-- <section class="offer sombra-blanca">
+                            <h3>Game Development</h3>
+                            <div class="iconos">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-apple-arcade" width="100" height="100" viewBox="0 0 24 24" stroke-width="2" stroke="#212121" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <circle cx="12" cy="5" r="2" />
+                                    <path d="M20 12.5v4.75a0.734 .734 0 0 1 -.055 .325a0.704 .704 0 0 1 -.348 .366l-5.462 2.58a4.998 4.998 0 0 1 -4.27 0l-5.462 -2.58a0.705 .705 0 0 1 -.401 -.691l-.002 -4.75" />
+                                    <path d="M4.431 12.216l5.634 -2.332a5.065 5.065 0 0 1 3.87 0l5.634 2.332a0.692 .692 0 0 1 .028 1.269l-5.462 2.543a5.064 5.064 0 0 1 -4.27 0l-5.462 -2.543a0.691 .691 0 0 1 .028 -1.27z" />
+                                    <line x1="12" y1="7" x2="12" y2="13" />
+                                </svg>
+                            </div>
+                            <p>Donec eu aliquam nibh. Nunc pellentesque purus at nunc semper cursus. Maecenas et odio at magna dapibus sagittis a eget risus.</p>
+                        </section>
+            
+                        <section class="offer sombra-blanca">
+                            <h3>Web Development</h3>
+                            <div class="iconos">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-browser" width="100" height="100" viewBox="0 0 24 24" stroke-width="2" stroke="#212121" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <rect x="4" y="4" width="16" height="16" rx="1" />
+                                    <line x1="4" y1="8" x2="20" y2="8" />
+                                    <line x1="8" y1="4" x2="8" y2="8" />
+                                </svg>
+                            </div>
+                            <p>Donec eu aliquam nibh. Nunc pellentesque purus at nunc semper cursus. Maecenas et odio at magna dapibus sagittis a eget risus.</p>
+                        </section>
+            
+                        <section class="offer sombra-blanca">
+                            <h3>Mobile Development</h3>
+                            <div class="iconos">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="100" height="100" viewBox="0 0 24 24" stroke-width="2" stroke="#212121" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="100" height="100" viewBox="0 0 24 24" stroke-width="2" stroke="#212121" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                                    <path d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
+                                </svg>
+                            </div>
+                            <p>Donec eu aliquam nibh. Nunc pellentesque purus at nunc semper cursus. Maecenas et odio at magna dapibus sagittis a eget risus.</p>
+                        </section>
+            
+                        <section class="offer sombra-blanca">
+                            <h3>Game Development</h3>
+                            <div class="iconos">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-apple-arcade" width="100" height="100" viewBox="0 0 24 24" stroke-width="2" stroke="#212121" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <circle cx="12" cy="5" r="2" />
+                                    <path d="M20 12.5v4.75a0.734 .734 0 0 1 -.055 .325a0.704 .704 0 0 1 -.348 .366l-5.462 2.58a4.998 4.998 0 0 1 -4.27 0l-5.462 -2.58a0.705 .705 0 0 1 -.401 -.691l-.002 -4.75" />
+                                    <path d="M4.431 12.216l5.634 -2.332a5.065 5.065 0 0 1 3.87 0l5.634 2.332a0.692 .692 0 0 1 .028 1.269l-5.462 2.543a5.064 5.064 0 0 1 -4.27 0l-5.462 -2.543a0.691 .691 0 0 1 .028 -1.27z" />
+                                    <line x1="12" y1="7" x2="12" y2="13" />
+                                </svg>
+                            </div>
+                            <p>Donec eu aliquam nibh. Nunc pellentesque purus at nunc semper cursus. Maecenas et odio at magna dapibus sagittis a eget risus.</p>
+                        </section>
+            
+                        <section class="offer sombra-blanca">
+                            <h3>Web Development</h3>
+                            <div class="iconos">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-browser" width="100" height="100" viewBox="0 0 24 24" stroke-width="2" stroke="#212121" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <rect x="4" y="4" width="16" height="16" rx="1" />
+                                    <line x1="4" y1="8" x2="20" y2="8" />
+                                    <line x1="8" y1="4" x2="8" y2="8" />
+                                </svg>
+                            </div>
+                            <p>Donec eu aliquam nibh. Nunc pellentesque purus at nunc semper cursus. Maecenas et odio at magna dapibus sagittis a eget risus.</p>
+                        </section>
+            
+                        <section class="offer sombra-blanca">
+                            <h3>App Development</h3>
+                            <div class="iconos">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="100" height="100" viewBox="0 0 24 24" stroke-width="2" stroke="#212121" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="100" height="100" viewBox="0 0 24 24" stroke-width="2" stroke="#212121" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                                    <path d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1" />
+                                </svg>
+                            </div>
+                            <p>Donec eu aliquam nibh. Nunc pellentesque purus at nunc semper cursus. Maecenas et odio at magna dapibus sagittis a eget risus.</p>
+                        </section> -->
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <div class="tab-4">
+            <label for="tab4-2">Contacto</label>
+            <input id="tab4-2" name="tabs-two" type="radio">
+            <div>
+                <h4>Contacto</h4>
+                <p>Quisque sit amet turpis leo. Maecenas sed dolor mi. Pellentesque varius elit in neque ornare commodo ac non tellus. Mauris id iaculis quam. Donec eu felis quam. Morbi tristique lorem eget iaculis consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean at tellus eget risus tempus ultrices. Nam condimentum nisi enim, scelerisque faucibus lectus sodales at.</p>
+            </div>
+        </div>
+
+        <div class="tab-4">
+            <label for="tab4-3">Nosotros</label>
+            <input id="tab4-3" name="tabs-two" type="radio">
+            <div class="maintenance sombra-blanca">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mood-sad" width="500" height="500" viewBox="0 0 24 24" stroke-width="3" stroke="#3b4994" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="9" />
+                    <line x1="9" y1="10" x2="9.01" y2="10" />
+                    <line x1="15" y1="10" x2="15.01" y2="10" />
+                    <path d="M9.5 15.25a3.5 3.5 0 0 1 5 0" />
+                </svg>
+                <h2>Oops... Parece que por el momento ésta función no está disponible :(</h2>
+            </div>
+        </div>
+
+        <div class="tab-4">
+            <label for="tab4-4" id="user-top-label">Iniciar sesión</label>
+            <input id="tab4-4" name="tabs-two" type="radio">
+            <div class="user sombra-blanca">
+                <h2 class="logIn">Inicia sesión</h2>
+                <form action="" id="login-form" class="logIn">
+                    <label for="login-username">Email</label><input type="email" id="login-email">
+                    <label for="login-password">Contraseña</label><input type="password" id="login-pass">
+                    <br><br>
+                    <button id="btn-login" type="button">Iniciar sesión</button>
+                </form>
+
+                <hr class="signIn">
+                <h2 class="signIn">¿No estás registrado?</h2>
+                <h2 class="signIn">Crea una cuenta</h2>
+                <form action="php/InsertUser.php" id="signup-form" class="signIn">   
+                    <label for="signup-username">Nombre de usuario</label>
+                    <input type="text" id="signupUsername" name="username"><span class="error-mark error" id="error-user">*</span>
+                    
+                    <label for="signup-email">Correo electrónico</label>
+                    <input type="text" id="signupEmail" name="email"><span class="error-mark error" id="error-email">*</span>
+                    
+                    <label for="signup-password">Contraseña</label>
+                    <input type="password" id="signupPassword" name="password"><span class="error-mark error" id="error-password">*</span>
+                    
+                    <label for="signup-birthdate">Fecha de nacimiento</label>
+                    <input type="text" id="datepicker">
+                    
+                    <br><br>
+                    <button id="signup-btn" type="submit">Registrarse</button>
+                    <p id="error-user-length" class="error">El nombre de usuario debe ser de al menos 8 caracteres</p>
+                    <p id="error-password-length" class="error">La contraseña debe ser de al menos 8 caracteres</p>
+                    <p id="error-password-uppercase" class="error">La contraseña debe contener al menos una mayúscula</p>
+                    <p id="error-password-sc" class="error">La contraseña debe contener al menos un caracter especial</p>
+                    <p id="error-email-format" class="error">El formato del correo es inválido</p>
+                </form>
+
+
+                <h3 class="signOut" id="signedInUsername">Usuario</h3>
+                <h3 class="signOut" id="signedInEmail">Correo electrónico</h3>
+                <br class="signOut">
+                <br class="signOut">
+                <button class="signOut" id="signOutBtn">Cerrar sesión</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>M3L S.A. DE C.V.</p>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js" type="text/javascript"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js" type="text/javascript"></script>  
+    
+    <script type="text/javascript" src="js/SignUp.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
