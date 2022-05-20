@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCry</title>
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    <!-- <link rel="preload" href="css/index.css" as="style"> -->
+    <link rel="stylesheet" href="css/chatView.css">
+</head>
+<body>
+    <a href="index.html">
+        <h1 class="titulo">UCry</h1>
+    </a>
+
+    <div class="tabs">
+            <div class="tab-4">
+                <label for="tab4-1">Volver</label>
+                <input id="tab4-1" name="tabs-two" type="radio" checked="checked">
+                <div>
+                    <main class="contenedor">
+                        <a onclick="history.back()" class="back-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="50" height="50" viewBox="0 0 24 24" stroke-width="3" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
+                            </svg>
+                        </a>
+                        <h2>CHAT</h2>
+
+                        <div class="contenedor-vacantes">
+                            <div class="user sombra-blanca">                                            
+                                            <section id="app1">
+                                                <div class="container1">
+                                                    <div class="row1">
+                                                        <div class="col-6">
+                                                            <div class="comment1" id="MsgList" style="word-wrap: break-word;">
+                                                                
+                                                                <img src="img/default-user-image.png" width="50" height="50">
+                                                                <p v-for="items in item1" v-text="items1" class="nowner">Muy bueno el curso, 10/10</p>
+                                                                <p class="hora">hora</p>
+                                                                <hr>
+
+                                                                <img src="img/default-user-image.png" width="50" height="50">
+                                                                <p v-for="items in item1" v-text="items1" class="owner">No te pregunté</p>
+                                                                <p class="hora">hora</p>
+                                                                <hr>
+
+                                                            </div><!--End Comment-->
+                                                        </div><!--End col -->
+                                                    </div><!-- End row -->
+                                                    <div class="row1">
+                                                        <div class="col-6">
+                                                            <textarea id="msg" type="text" class="input" @keyup.enter=""></textarea>
+                                                            <button id="SendMessage" class='primaryContained float-right'>send</button>
+                                                        </div><!-- End col -->
+                                                    </div><!--End Row -->
+                                                </div><!--End Container -->
+                                            </section><!-- end App -->
+                                            
+                                            <br>
+                                            <br>
+                            </div>
+                        </div>
+
+                    </main>
+                </div>
+            </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js" type="text/javascript"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js" type="text/javascript"></script>
+    <script type="text/javascript" src="javascript/Chat.js"></script>
+</body>
+</html>

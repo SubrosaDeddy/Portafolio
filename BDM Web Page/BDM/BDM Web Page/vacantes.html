@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCry</title>
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    <!-- <link rel="preload" href="css/index.css" as="style"> -->
+    <link rel="stylesheet" href="css/vacantes.css">
+</head>
+<body>
+    <a href="index.html">
+        <h1 class="titulo">UCry</h1>
+    </a>
+    
+    <div class="tabs">
+        <div class="tab-4">
+            <label for="tab4-1">Catalogo de cursos</label>
+            <input id="tab4-1" name="tabs-two" type="radio" checked="checked">
+            <div>
+                <main class="contenedor">
+                    <a href="index.html" class="back-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="50" height="50" viewBox="0 0 24 24" stroke-width="3" stroke="#cacaca" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
+                        </svg>
+                    </a>
+                    <h2>Cursos</h2>
+                    <section class="vacantes-top">
+                        <div class="filtros">
+                            <!-- <div>
+                                <p>Fecha inicio: </p>
+                                <input type="date" id="beginDate">
+                                <p>Fecha fin: </p>
+                                <input type="date" id="endDate">
+                            </div> -->
+                            <div>
+                                <p>Buscar</p>
+                                <input type="text" id="BusquedaAvanzada">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round" onclick="SearchCoursesAdvanced()">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="10" cy="10" r="7" />
+                                  <line x1="21" y1="21" x2="15" y2="15" />
+                                </svg>
+                            </div>
+            <!--
+                            <div>
+                                <p>Sueldo mínimo: </p>
+                                <input class="sueldo-minimo" type="tel" min="1" max="100" value="50" class="slider" id="myRange">
+                                <p>MXN</p>
+                            </div>
+             -->
+                        </div>
+            
+                    </section> 
+              
+                    <div class="contenedor-vacantes" id="contenedor-vacantes">
+                     <!--      
+                        <section class="vacante sombra-blanca">
+                         <a href="detalle-vacante.html" class="vacante sombra-blanca"> 
+                            <div class="puesto-nombre">
+                                <h4>Base de Datos</h3>
+                            </div>
+                        
+                            <div class="puesto-idioma">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <polyline points="7 8 3 12 7 16" />
+                                  <polyline points="17 8 21 12 17 16" />
+                                  <line x1="14" y1="4" x2="10" y2="20" />
+                                </svg>
+                                <p>MySQL</p>
+                            </div>
+
+                            <div class="puesto-direccion">
+                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                 <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+                                 <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+                               </svg>
+                                <p>Angel Rodriguez</p>
+                            </div>
+                    
+                            <div class="puesto-sueldo">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-book" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                    <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                    <line x1="3" y1="6" x2="3" y2="19" />
+                                    <line x1="12" y1="6" x2="12" y2="19" />
+                                    <line x1="21" y1="6" x2="21" y2="19" />
+                                </svg>
+                                <p>5 niveles</p>
+                            </div>
+                            </a>
+                        </section>
+                            
+
+                        <section class="vacante sombra-blanca">
+                            <div class="puesto-nombre">
+                                <h4>HTML/CSS</h3>
+                            </div>
+                            
+                            <div class="puesto-idioma">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <polyline points="7 8 3 12 7 16" />
+                                  <polyline points="17 8 21 12 17 16" />
+                                  <line x1="14" y1="4" x2="10" y2="20" />
+                                </svg>
+                                <p>software libre</p>
+                            </div>
+                    
+                            <div class="puesto-direccion">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+                                <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+                              </svg>
+                                <p>Daniel Luna, Angel Rdz</p>
+                            </div>
+                    
+                            <div class="puesto-sueldo">
+                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-book" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                    <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                    <line x1="3" y1="6" x2="3" y2="19" />
+                                    <line x1="12" y1="6" x2="12" y2="19" />
+                                    <line x1="21" y1="6" x2="21" y2="19" />
+                                </svg>
+                                <p>2 niveles</p>
+                            </div>
+                        </section>
+                    
+                        <section class="vacante sombra-blanca">
+                            <div class="puesto-nombre">
+                                <h4>JavaScript</h3>
+                            </div>
+                            
+                            <div class="puesto-idioma">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00bfd8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <polyline points="7 8 3 12 7 16" />
+                                  <polyline points="17 8 21 12 17 16" />
+                                  <line x1="14" y1="4" x2="10" y2="20" />
+                                </svg>
+                                <p>Software libre</p>
+                            </div>
+                    
+                            <div class="puesto-direccion">
+                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                 <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+                                 <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+                               </svg>
+                                <p>Daniel Luna </p>
+                            </div>
+                    
+                            <div class="puesto-sueldo">
+                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-book" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                    <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                    <line x1="3" y1="6" x2="3" y2="19" />
+                                    <line x1="12" y1="6" x2="12" y2="19" />
+                                    <line x1="21" y1="6" x2="21" y2="19" />
+                                </svg>
+                                <p>3 niveles</p>
+                            </div>
+                        </section>
+                    </div> -->
+                </main>
+            </div>
+        </div>
+
+        <div class="tab-4">
+            <label for="tab4-2">Contacto</label>
+            <input id="tab4-2" name="tabs-two" type="radio">
+            <div>
+                <h4>Contacto</h4>
+                <p>Quisque sit amet turpis leo. Maecenas sed dolor mi. Pellentesque varius elit in neque ornare commodo ac non tellus. Mauris id iaculis quam. Donec eu felis quam. Morbi tristique lorem eget iaculis consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean at tellus eget risus tempus ultrices. Nam condimentum nisi enim, scelerisque faucibus lectus sodales at.</p>
+            </div>
+        </div>
+
+        <div class="tab-4">
+            <label for="tab4-3">Nosotros</label>
+            <input id="tab4-3" name="tabs-two" type="radio">
+            <div class="maintenance sombra-blanca">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mood-sad" width="500" height="500" viewBox="0 0 24 24" stroke-width="3" stroke="#3b4994" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="9" />
+                    <line x1="9" y1="10" x2="9.01" y2="10" />
+                    <line x1="15" y1="10" x2="15.01" y2="10" />
+                    <path d="M9.5 15.25a3.5 3.5 0 0 1 5 0" />
+                </svg>
+                <h2>Oops... Parece que por el momento ésta función no está disponible :(</h2>
+            </div>
+        </div>
+
+        <div class="tab-4">
+            <label for="tab4-4">Usuario</label>
+            <input id="tab4-4" name="tabs-two" type="radio">
+            
+            <div class="user sombra-blanca">
+                
+                <h2>Inicia sesión</h2>
+                <form class="form-login">
+                    <label for="login-username">Nombre de usuario</label><input type="text" id="loginUsername">
+                    <label for="login-password">Contraseña</label><input type="password" id="loginPassword">
+                    <label><button> Ingresar </button></label>
+                </form>
+                
+                <hr>
+                
+                <h2>¿No estás registrado?</h2>
+                <h2>Crea una cuenta</h2>
+                <form class="form-sign-in">
+                    
+                    <label for="myFile">Imagen de usuario</label>
+                    <div class="user-img">
+                        <img src="img/default-user-image.png" alt="">
+                    </div>
+                    <input type="file" id="myFile" name="filename">
+                    <!-- <input type="submit"> -->
+                    <br><br><br><br>
+                    <label for="signupUsername">Nombre de usuario</label><input type="text" id="signupUsername">
+                    <label for="signupFullname">Nombre completo</label><input type="text" id="signupFullname">
+                    <label for="signupPassword">Contraseña</label><input type="password" id="signupPassword">
+                    <label for="signupEmail">Email</label><input type="email" id="signupEmail">
+                
+                    <div class="CheckGender">
+                        <div>
+                            <label for="singupGender">Genero</label>
+                            <select name="singupGender" id="singupGender">
+                                <option value="Male">Maculino</option>
+                                <option value="Female">Femenino</option>
+                                <option value="Other">Otro</option>
+                            </select>
+                        </div>
+                    </div> 
+
+                    <div class="CheckType">
+                        <label for="signupType">Tipo de Usuario </label>
+                        <select name="signupType" id="signupType">
+                            <option value="Escuela">Escuela</option>
+                            <option value="Alumno">Alumno</option>
+                        </select>
+                    </div>
+
+                    <br><br><br><br>
+                    <div>
+                        <!-- <button type="submit">Registrarme</button> -->
+                        <label><button> Registrarme </button></label>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>UCry Online Courses ®</p>
+    </footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+    <!-- <script type="text/javascript" src="javascript/validate.js"></script> -->
+    <script type="text/javascript" src="javascript/vacantes.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_UpdateUserPhotoPath`(
+	SPV_id_user	int,
+    SPV_NewPath	text
+)
+BEGIN
+	UPDATE T_User
+    SET photoPath = SPV_NewPath
+    WHERE id_user = SPV_id_user;
+END

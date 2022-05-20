@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_InsertCategory`(
+IN SPV_categoryName 	varchar(50),
+IN SPV_fkCreator		int,
+IN SPV_description		text)
+BEGIN
+	INSERT INTO T_Category(category_name, fk_creator, creation_date, catDescription)
+    VALUES(SPV_categoryName, SPV_fkCreator, curdate(), SPV_description);
+END

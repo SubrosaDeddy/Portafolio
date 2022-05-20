@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SelectCommentsByCourse`(
+IN SPV_IDCourse	int)
+BEGIN
+	SELECT id_comment,t_user.userName as userName, fk_user, fk_course, title, comment_description, post_date
+    FROM t_comment
+    join t_user on t_comment.fk_user=t_user.id_user
+    WHERE fk_course = SPV_IDCourse;
+END

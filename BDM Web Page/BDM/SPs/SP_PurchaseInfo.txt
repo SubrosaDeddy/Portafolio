@@ -1,0 +1,22 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_PurchaseInfo`(
+IN SPV_courseID	int,
+IN SPV_userID	int,
+IN SPV_levelIndex int)
+BEGIN
+	DECLARE lastLevelPaid INT;
+    DECLARE levelsToPay INT;
+    
+    SET lastLevelPaid = (SELECT TR_UserCourse.lastLevelPaid FROM TR_UserCourse WHERE fk_course = SPV_courseID AND fk_user = SPV_userID);
+    
+    IF (lastLevelPaid IS NULL)
+    THEN 
+		SET lastLevelPaid = 0;
+    END IF;
+    
+    SET levelsToPay = SPV_levelIndex - lastLevelPaid;
+
+	SELECT sum(level_cost) AS "cost", levelsToPay
+    FROM T_Level
+    WHERE fk_course = SPV_courseID AND level_index > lastLevelPaid AND level_index <= SPV_levelIndex
+    GROUP BY fk_course;
+END

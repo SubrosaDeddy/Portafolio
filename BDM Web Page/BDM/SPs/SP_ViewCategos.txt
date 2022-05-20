@@ -1,0 +1,5 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_ViewCategos`()
+BEGIN
+	SELECT id,nombre, fk_creator, creation_date, catDescription
+    FROM ViewCategorias;
+END

@@ -1,0 +1,11 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_FinishLevel`(
+IN SPV_idCurso int,
+IN SPV_idUser int,
+IN SPV_levelIndex int
+)
+BEGIN
+	Update tr_usercourse set progress = SPV_levelIndex
+    where fk_course = SPV_idCurso and fk_user=SPV_idUser;
+    
+    SELECT SPV_levelIndex;
+END

@@ -1,0 +1,13 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SelectDiploma`(
+IN SPV_userID	int,
+IN SPV_courseID	int)
+BEGIN 
+	SELECT concat(StudentName.first_name, " ", StudentName.middle_name, " ", StudentName.last_name, " ", StudentName.second_last_name) AS StudentFullName, TR_UserCourse.conclusion_date, T_Course.title, concat(InstructorName.first_name, " ", InstructorName.middle_name, " ", InstructorName.last_name, " ", InstructorName.second_last_name) AS InstructorFullName
+    FROM T_User AS Student
+    JOIN T_Name AS StudentName ON T_User.fk_user_name = T_Name.id_name
+    JOIN TR_UserCourse ON T_User.id_user = TR_UserCourse.fk_user
+    JOIN T_Course ON TR_UserCourse.fk_course = T_Course.id_course
+    JOIN T_User AS Instructor ON T_Course.fk_instructor = Instructor.id_user
+    JOIN T_Name AS InstructorName ON Instructor.fk_user_name = InstructorName.id_name
+    WHERE T_User.id_user = SPV_userID AND T_Course.id_course = SPV_courseID;
+END

@@ -1,0 +1,9 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_InsertMessage`(
+IN SPV_fkChat	int,
+IN SPV_fkUser	int,
+IN SPV_msg		text
+)
+BEGIN
+	INSERT INTO T_Message(fk_chat, fk_user, msg_description, send_date)
+    VALUES(SPV_fkChat, SPV_fkUser, SPV_msg, now());
+END

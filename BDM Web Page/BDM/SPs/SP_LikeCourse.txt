@@ -1,0 +1,10 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_LikeCourse`(
+IN SPV_idCurso int,
+IN SPV_idUser int,
+IN SPV_Like int
+)
+BEGIN
+	UPDATE tr_usercourse
+    SET tr_usercourse.rating = SPV_Like
+    WHERE tr_usercourse.fk_user=SPV_idUser AND tr_usercourse.fk_course=SPV_idCurso;
+END

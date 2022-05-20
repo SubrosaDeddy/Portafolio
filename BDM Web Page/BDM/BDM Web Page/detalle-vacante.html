@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCry</title>
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/detalle-vacante.css" as="style">
+    <link rel="stylesheet" href="css/detalle-vacante.css">
+
+
+
+
+</head>
+<body>
+    <a href="index.html">
+        <h1 class="titulo">UCry</h1>
+    </a>
+    
+    <div class="tabs">
+        <div class="tab-4">
+            <label for="tab4-1">Detalles de curso</label>
+            <input id="tab4-1" name="tabs-two" type="radio" checked="checked">
+            <div>
+                <main class="contenedor">
+                    <a href="vacantes.html" class="back-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="50" height="50" viewBox="0 0 24 24" stroke-width="3" stroke="#cacaca" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
+                        </svg>
+                    </a>
+                    <h2 id="TituloCurso">Curso MySQL</h2>
+                    <div class="detalle-puesto sombra-blanca">
+                        
+                        <h4>Detalles</h4>
+                        <p id="DetallesCurso">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras blandit tincidunt sapien, in consectetur odio ultrices in. Morbi lacinia urna eu risus dapibus rutrum. Aenean laoreet varius augue, non aliquam lacus ornare in. Nam volutpat eget diam vitae eleifend. Phasellus feugiat odio cursus tristique porttitor. Ut fermentum, enim at consequat aliquet, orci lorem finibus quam, eu pellentesque risus arcu et turpis. Ut pulvinar ac ante eget tristique. Quisque id consequat velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras arcu massa, tincidunt luctus est sit amet, pretium pharetra diam. Suspendisse ut ultrices neque, et venenatis odio.</p>
+                        <section class="summary-vacante">
+                            <div class="puesto-idioma">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-book" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                    <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+                                    <line x1="3" y1="6" x2="3" y2="19" />
+                                    <line x1="12" y1="6" x2="12" y2="19" />
+                                    <line x1="21" y1="6" x2="21" y2="19" />
+                                </svg>
+                                <p>MySQL</p>
+                            </div>
+                
+                            <div class="puesto-direccion">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-school" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                 <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+                                 <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+                               </svg>
+                                <p>Angel Rodriguez</p>
+                            </div>
+                
+                            <div class="puesto-sueldo">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cash" width="36" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <rect x="7" y="9" width="14" height="10" rx="2" />
+                                    <circle cx="14" cy="14" r="2" />
+                                    <path d="M17 9v-2a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h2" />
+                                </svg>
+                                <p>15,000 MXN</p>
+                            </div>
+
+                            <div class="aInForm">
+                                <!-- <a href="Compra.html"><button class="aInForm">Comprar nivel siguiente</button></a>
+                                <a href="Compra.html"><button class="aInForm">Comprar curso completo</button></a> -->
+                            </div>
+                        </section>
+                        
+                        <h4>Niveles</h4>
+                            <div class="requisitos">
+                                <div class="requisitos-labels">
+                                    <h5 class="experiencia-minima">Nivel</h5> <h5 class="descripcion">Descripcion</h5>  <h5 class="experiencia-input">Finalizado</h5>
+                                </div>
+                                <form action="" class="form-requisitos" id="form-requisitos">
+                                    <div  class="comprado">
+                                        <p class="xp-element" >1</p> <p class="descripcion-element">Praesent tortor urna, tempor nec mollis sit amet, dignissim id augue. Vivamus vel consequat mi, eget mollis quam. Integer sed eleifend lorem</p> <a href="CursoNivel.html" class="aInForm"><p>Ver</p></a> <input type="text" class="requisito0" class="sombra-blanca input-element"> 
+                                    </div>
+                                    <div class="requisito-element">
+                                        <p class="xp-element">2</p> <p class="descripcion-element">Praesent tortor urna, tempor nec mollis sit amet, dignissim id augue. Vivamus vel consequat mi, eget mollis quam. Integer sed eleifend lorem</p> <input type="text" class="requisito0" class="input-element sombra-blanca">
+                                    </div>
+                                    <div class="requisito-element">
+                                        <p class="xp-element">3</p> <p class="descripcion-element">Praesent tortor urna, tempor nec mollis sit amet, dignissim id augue. Vivamus vel consequat mi, eget mollis quam. Integer sed eleifend lorem</p> <input type="text" class="requisito0" class="input-element sombra-blanca">
+                                    </div>
+                                    <div class="requisito-element">
+                                        <p class="xp-element">4</p> <p class="descripcion-element">Praesent tortor urna, tempor nec mollis sit amet, dignissim id augue. Vivamus vel consequat mi, eget mollis quam. Integer sed eleifend lorem</p>  <input type="text" class="requisito0" class="input-element sombra-blanca">
+                                    </div>
+                                </form>
+                            
+                            <hr>
+                            <div class="choose-file" id="obtenerCertificado">
+                                    <h4>Obtener certificado</h4>  
+                                    <button  >download</button>
+                            </div>
+
+                           
+                            <hr>
+                            <h4 >Calificacion</h4>
+                            <div>
+                                 <label id="DarLike"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-star" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                                </svg></label><br>
+                                <label id="TotalLikes">Total:   100</label>
+                            </div>
+                            <br>    
+                            <hr>
+                            
+                        </div>
+
+                     
+
+                        <div>
+                            <h4>Comentarios</h4>
+                            <section id="app1">
+                                <div class="container1">
+                                    <div class="row1">
+                                        <div class="col-6">
+                                            <div class="comment1">
+                                                
+                                                
+                                                <p v-for="items in item1" v-text="items1">Pablito</p>
+                                                <img src="img/default-user-image.png" width="50" height="50">
+                                                <p v-for="items in item1" v-text="items1">Muy bueno el curso, 10/10 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                                                <hr>
+
+                                                <img src="img/default-user-image.png" width="50" height="50">
+                                                <p v-for="items in item1" v-text="items1">Che curso feo, no me gusta</p>
+                                                <hr>
+
+                                            </div><!--End Comment-->
+                                        </div><!--End col -->
+                                    </div><!-- End row -->
+                                    <div class="row1">
+                                        <div class="col-6">
+                                            <textarea id="msg" type="text" class="input" placeholder="Write a comment" @keyup.enter="">
+                                            </textarea>
+                                            <button id="Comentar" class='primaryContained float-right' type="submit">Add Comment</button>
+                                        </div><!-- End col -->
+                                    </div><!--End Row -->
+                                </div><!--End Container -->
+                            </section><!-- end App -->
+                        </div>
+                        <!--ChatBox-->
+
+                      <!--  <div class="container">
+                            <div class="chatbox">
+                                <div class="chatbox__support">
+                                    <div class="chatbox__header">
+                                        Chat support!
+                                    </div>
+                                    <div class="messages">
+                                        <div>
+                                            <div class="messages__item--visitor">
+                                                Hi!
+                                            </div>
+                                            <div class="messages__item--operator">
+                                                What is it?
+                                            </div>
+                                            .<div class="messages__item--typing">
+                                                <span class="messages__dot"></span>
+                                                <span class="messages__dot"></span>
+                                                <span class="messages__dot"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chatbox__footer">
+                                        <input type="text" placeholder="Write a message">
+                                    </div>
+                                </div>-->
+                                
+                                <div class="chatbox__button">
+                                    <button id="ChatSchool"  >Habla con el profesor</button>
+                                </div>
+                          <!--  </div>
+                        </div> < !--EndChatbox-->
+
+                    </div> 
+                </main>
+            </div>
+        </div>
+
+        <div class="tab-4" style="z-index: -1">
+            <label for="tab4-2">Contacto</label>
+            <input id="tab4-2" name="tabs-two" type="radio">
+            <div>
+                <h4>Contacto</h4>
+                <p>Quisque sit amet turpis leo. Maecenas sed dolor mi. Pellentesque varius elit in neque ornare commodo ac non tellus. Mauris id iaculis quam. Donec eu felis quam. Morbi tristique lorem eget iaculis consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean at tellus eget risus tempus ultrices. Nam condimentum nisi enim, scelerisque faucibus lectus sodales at.</p>
+            </div>
+        </div>
+
+        <div class="tab-4" style="z-index: -1">
+            <label for="tab4-3">Nosotros</label>
+            <input id="tab4-3" name="tabs-two" type="radio">
+            <div class="maintenance sombra-blanca">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mood-sad" width="500" height="500" viewBox="0 0 24 24" stroke-width="3" stroke="#3b4994" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <circle cx="12" cy="12" r="9" />
+                    <line x1="9" y1="10" x2="9.01" y2="10" />
+                    <line x1="15" y1="10" x2="15.01" y2="10" />
+                    <path d="M9.5 15.25a3.5 3.5 0 0 1 5 0" />
+                </svg>
+                <h2>Oops... Parece que por el momento ésta función no está disponible :(</h2>
+            </div>
+        </div>
+
+        <div class="tab-4" style="z-index: -1">
+            <label for="tab4-4">Usuario</label>
+            <input id="tab4-4" name="tabs-two" type="radio">
+            
+            <div class="user sombra-blanca">
+                
+                <h2>Inicia sesión</h2>
+                <form class="form-login">
+                    <label for="login-username">Nombre de usuario</label><input type="text" id="loginUsername">
+                    <label for="login-password">Contraseña</label><input type="password" id="loginPassword">
+                    <label><button> Ingresar </button></label>
+                </form>
+                
+                <hr>
+                
+                <h2>¿No estás registrado?</h2>
+                <h2>Crea una cuenta</h2>
+                <form class="form-sign-in">
+                    
+                    <label for="myFile">Imagen de usuario</label>
+                    <div class="user-img">
+                        <img src="img/default-user-image.png" alt="">
+                    </div>
+                    <input type="file" id="myFile" name="filename">
+                    <!-- <input type="submit"> -->
+                    <br><br><br><br>
+                    <label for="signupUsername">Nombre de usuario</label><input type="text" id="signupUsername">
+                    <label for="signupFullname">Nombre completo</label><input type="text" id="signupFullname">
+                    <label for="signupPassword">Contraseña</label><input type="password" id="signupPassword">
+                    <label for="signupEmail">Email</label><input type="email" id="signupEmail">
+                
+                    <div class="CheckGender">
+                        <div>
+                            <label for="singupGender">Genero</label>
+                            <select name="singupGender" id="singupGender">
+                                <option value="Male">Maculino</option>
+                                <option value="Female">Femenino</option>
+                                <option value="Other">Otro</option>
+                            </select>
+                        </div>
+                    </div> 
+
+                    <div class="CheckType">
+                        <label for="signupType">Tipo de Usuario </label>
+                        <select name="signupType" id="signupType">
+                            <option value="Escuela">Escuela</option>
+                            <option value="Alumno">Alumno</option>
+                        </select>
+                    </div>
+
+                    <br><br><br><br>
+                    <div>
+                        <!-- <button type="submit">Registrarme</button> -->
+                        <label><button> Registrarme </button></label>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <footer class="footer">
+        <p>UCry Online Courses ®</p>
+    </footer>
+
+    <!--<script type="text/javascript" src="javascript/Chat.js"></script>
+    <script type="text/javascript" src="javascript/app.js"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js" type="text/javascript"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js" type="text/javascript"></script>
+    <script type="text/javascript" src="javascript/validate.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_GetProgress`(
+IN SPV_idCurso int,
+IN SPV_idUser int
+)
+BEGIN
+	select progress 
+    from tr_usercourse 
+    where tr_usercourse.fk_course=SPV_idCurso 
+    and tr_usercourse.fk_user=SPV_idUser;
+END

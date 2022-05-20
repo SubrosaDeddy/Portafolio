@@ -1,0 +1,18 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SelectCourses`()
+BEGIN
+	DECLARE SPV_avgRating INT;
+	SET SPV_avgRating = (SELECT avg(rating) FROM t_usercourse WHERE fk_course = SPV_id_course);
+    
+	SELECT 
+    T_Course.id_course, T_Course.title, T_Course.image, T_Course.general_rating, T_Course.level_quantity, T_Course.course_description,  SPV_avgRating,
+    T_User.id_user, T_User.fk_user_name, T_User.user_password, T_User.gender, T_User.email, T_User.photo,
+	T_Name.first_name, T_Name.middle_name, T_Name.last_name, T_Name.second_last_name, 
+    T_Category.category_name
+    FROM T_Course 
+    JOIN T_User ON T_Course.fk_instructor = T_User.id_course 
+    JOIN T_Name ON T_User.fk_user_name = T_Name.id_name
+    JOIN T_CourseCategory ON T_CourseCategory.fk_course = T_Course.id_course
+    JOIN T_Category ON T_CourseCategory.fk_category = T_Category.id_category
+    WHERE T_Course.taken_down IS FALSE
+    ORDER BY T_Course.general_rating DESC;
+END

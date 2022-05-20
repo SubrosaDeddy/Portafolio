@@ -1,0 +1,10 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_GetMessages`(
+IN SPV_IdChat int
+)
+BEGIN
+    SELECT fk_chat, fk_user as idUsuario, msg_description as msg, send_date as fecha
+    FROM T_Message
+    WHERE fk_chat=SPV_IdChat
+    order by fecha, pk_message
+    limit 10;
+END

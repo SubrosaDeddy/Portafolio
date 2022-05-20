@@ -1,0 +1,7 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_InsertChat`(
+IN SPV_idStudent	int,
+IN SPV_idTeacher	int)
+BEGIN
+	INSERT INTO T_Chat(fk_student, fk_teacher)
+    VALUES(SPV_idStudent, SPV_idTeacher);
+END

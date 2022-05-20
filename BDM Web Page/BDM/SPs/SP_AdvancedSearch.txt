@@ -1,0 +1,20 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_AdvancedSearch`(
+IN SPV_text	text,
+IN SPV_category varchar(50))
+BEGIN
+	SELECT T_Course.id_course,t_user.id_user AS "id_instructor" ,T_Course.title,t_name.first_name, t_name.last_name,t_course.level_quantity, T_Course.full_price
+	FROM TR_CourseCategory 
+	JOIN t_category ON t_category.id_category=tr_coursecategory.fk_category
+	JOIN t_course ON t_course.id_course=tr_coursecategory.fk_course
+	JOIN t_user ON t_user.id_user = t_course.fk_instructor
+	JOIN t_name ON t_name.id_name = t_user.id_user
+	WHERE T_Course.taken_down IS FALSE AND t_category.category_name= SPV_category AND title LIKE concat("%", SPV_text, "%")
+	UNION DISTINCT 
+	SELECT T_Course.id_course,t_user.id_user AS "id_instructor" ,T_Course.title,t_name.first_name, t_name.last_name,t_course.level_quantity, T_Course.full_price
+	FROM TR_CourseCategory 
+	JOIN t_category ON t_category.id_category=tr_coursecategory.fk_category
+	JOIN t_course ON t_course.id_course=tr_coursecategory.fk_course
+	JOIN t_user ON t_user.id_user = t_course.fk_instructor
+	JOIN t_name ON t_name.id_name = t_user.id_user
+	WHERE T_Course.taken_down IS FALSE AND t_category.category_name= SPV_category AND course_description LIKE concat("%", SPV_text, "%");
+END

@@ -1,0 +1,26 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_BuyCourse`(
+IN SPV_idUser			int,
+IN SPV_idCourse 		int,
+IN SPV_paymentMethod	int,
+IN SPV_lastLevelPaid 	int, 
+IN SPV_amountPaid		float(13, 2))
+BEGIN
+	DECLARE id INT;
+    DECLARE teacherID INT;
+    SET id = (SELECT id_user_course FROM TR_UserCourse WHERE fk_user = SPV_idUser AND fk_course = SPV_idCourse);
+    SET teacherID = (SELECT fk_instructor FROM T_Course WHERE id_course = SPV_idCourse);
+    
+    IF(id IS NULL)
+    THEN
+		INSERT INTO TR_UserCourse(fk_user, fk_course, fk_payment_method, conclusion_date, last_entry, inscription_date, progress, lastLevelPaid, amountPaid)
+		VALUES(SPV_idUser, SPV_idCourse, SPV_paymentMethod, curdate(), curdate(), curdate(), 0, SPV_lastLevelPaid, SPV_amountPaid)
+		ON DUPLICATE KEY UPDATE 
+		lastlevelPaid = SPV_lastLevelPaid;
+        
+        CALL SP_InsertChat(SPV_idUser, teacherID);
+	ELSE
+		UPDATE TR_UserCourse
+        SET fk_payment_method = SPV_paymentMethod, lastLevelPaid = SPV_lastLevelPaid, amountPaid = amountPaid + SPV_amountPaid
+        WHERE id_user_course = id;
+    END IF;
+END

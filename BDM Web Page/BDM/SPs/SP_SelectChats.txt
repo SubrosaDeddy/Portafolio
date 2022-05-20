@@ -1,0 +1,9 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SelectChats`(
+IN SPV_idSession    int,
+IN SPV_idDestiny    int)
+BEGIN
+	SELECT id_chat
+    FROM T_Chat
+    WHERE (T_Chat.fk_student = SPV_idSession AND T_Chat.fk_teacher = SPV_idDestiny) 
+    OR (T_Chat.fk_student = SPV_idDestiny AND T_Chat.fk_teacher = SPV_idSession);
+END

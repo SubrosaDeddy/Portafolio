@@ -1,0 +1,11 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_UpdateCourse`(
+IN SPV_courseID			int,
+IN SPV_title			text,
+IN SPV_image			blob,
+IN SPV_description		text
+)
+BEGIN
+	UPDATE T_Course
+	SET title = SPV_title, image = SPV_image, course_description = SPV_description
+    WHERE id_course = SPV_courseID;
+END

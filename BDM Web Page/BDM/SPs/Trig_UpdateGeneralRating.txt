@@ -1,0 +1,20 @@
+DROP TRIGGER IF EXISTS BDM.Trig_UpdateGeneralRating;
+delimiter //
+CREATE TRIGGER Trig_UpdateGeneralRating    
+    AFTER UPDATE  
+        ON TR_UserCourse 
+        FOR EACH ROW 
+		BEGIN     
+        	DECLARE amountStudents INT; 
+            DECLARE totalRating INT;
+            DECLARE avgRating INT;
+            SET amountStudents = (SELECT count(id_user_course) FROM TR_UserCourse WHERE id_user_course = new.id_user_course); 
+            
+            SET totalRating = (SELECT sum(rating) FROM TR_UserCourse WHERE fk_course = new.fk_course);
+            
+            SET avgRating = totalRating/amountStudents;
+			
+            UPDATE T_Course
+			SET general_rating = avgRating
+            WHERE new.fk_course = T_Course.id_course;
+		END//  

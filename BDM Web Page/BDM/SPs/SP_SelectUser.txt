@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SelectUser`(
+	SPV_userName	varchar(50)
+)
+BEGIN
+	SELECT id_user, fk_user_name, userName, user_password, gender, email, photo, usertype, T_Name.id_name, T_Name.first_name, T_Name.middle_name, T_Name.last_name, T_Name.second_last_name
+    FROM T_User JOIN T_Name ON t_user.fk_user_name = T_Name.id_name
+    WHERE userName = SPV_userName AND taken_down = false;
+END

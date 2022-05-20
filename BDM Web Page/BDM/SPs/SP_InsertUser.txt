@@ -1,0 +1,19 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_InsertUser`(
+IN SPV_username			varchar(50),
+IN SPV_first_name		varchar(50),
+IN SPV_middle_name		varchar(50),
+IN SPV_last_name		varchar(50),
+IN SPV_second_last_name	varchar(50),
+IN SPV_password			varchar(50),
+IN SPV_gender			varchar(50),
+IN SPV_email			varchar(50),
+IN SPV_type				varchar(50))
+BEGIN
+	INSERT INTO T_Name(first_name, middle_name, last_name, second_last_name)
+    VALUES(SPV_first_name, SPV_middle_name, SPV_last_name, SPV_second_last_name);
+    
+	INSERT INTO T_User(userName, fk_user_name, user_password, gender, email, userType)
+    VALUES(SPV_username, last_insert_id(), SPV_password, SPV_gender, SPV_email, SPV_type);
+    
+    SELECT last_insert_id() AS "ID";
+END

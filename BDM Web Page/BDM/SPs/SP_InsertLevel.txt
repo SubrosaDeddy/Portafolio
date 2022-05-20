@@ -1,0 +1,13 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_InsertLevel`(
+	IN SPV_fk_course 			int,
+    IN SPV_video 				text,
+    IN SPV_level_index			int,
+    IN SPV_level_cost			int,
+    IN SPV_level_description	text
+)
+BEGIN
+	INSERT INTO T_Level(fk_course, videoPath, level_index, level_cost, descripcion)
+    VALUES(SPV_fk_course, SPV_video, SPV_level_index, SPV_level_cost, SPV_level_description);
+    
+    SELECT last_insert_id() AS "ID";
+END

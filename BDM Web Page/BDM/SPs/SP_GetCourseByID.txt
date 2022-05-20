@@ -1,0 +1,12 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_GetCourseByID`(
+IN SPV_idCurso int
+)
+BEGIN
+    
+    SELECT  title, course_description, t_user.userName as Maestro, full_price, level_quantity,t_course.fk_instructor as instructorID, general_rating
+    from T_Course
+    join t_user on t_course.fk_instructor=t_user.id_user
+    join t_name on t_user.fk_user_name = t_name.id_name
+    where t_course.id_course = SPV_idCurso;
+                
+END

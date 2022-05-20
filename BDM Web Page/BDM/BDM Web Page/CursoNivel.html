@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCry</title>
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    <!-- <link rel="preload" href="css/index.css" as="style"> -->
+    <link rel="stylesheet" href="css/CursoNivel.css">
+</head>
+<body>
+	<a href="index.html">
+	    <h1 class="titulo">UCry</h1>
+	</a>
+
+	<div class="tabs">
+			<div class="tab-4">
+	            <label for="tab4-1">Volver</label>
+	            <input id="tab4-1" name="tabs-two" type="radio" checked="checked">
+	            <div>
+	                <main class="contenedor">
+	                    <a onclick="history.back()" class="back-btn">
+	                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up" width="50" height="50" viewBox="0 0 24 24" stroke-width="3" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+	                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+	                            <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
+	                        </svg>
+	                    </a>
+	                    <h2 id="Nivel">Nivel</h2>
+
+	                    <div class="contenedor-vacantes">
+                        	<div class="user sombra-blanca">                        	                
+                        	                <form action="">
+                        	                    <div class="user-img">
+                        	                    
+                        	                    	<video width="720" height="480" controls>
+                        	                    	  <source src="videos/Intro.mp4" type="video/mp4">
+                        	                    	  <source src="Intro.ogg" type="video/ogg">
+                        	                    	  Your browser does not support the video tag.
+                        	                    	</video>
+
+                        	                    </div>
+                        	                    	<br><hr><br>
+                        	                    
+                        	                    	<label id="LabelInBox">Quisque sit amet turpis leo. Maecenas sed dolor mi. Pellentesque varius elit in neque ornare commodo ac non tellus. Mauris id iaculis quam. Donec eu felis quam. Morbi tristique lorem eget iaculis consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean at tellus eget risus tempus ultrices. Nam condimentum nisi enim, scelerisque faucibus lectus sodales at.
+                        	                    	</label>
+                        	                    
+                        	                    
+                        	                    
+                        	                    	<br><hr><br>
+                        	                    <div>
+                        	                    	<h3 class="HeaderInBox">Documentos</h3>
+                        	                    	<div id="Documentos">
+                        	                    		<a href=""><p id="LevelFiles" class="PinBox">Descargar</p></a>
+                        	                    	</div>
+                        	                    </div>
+
+                        	                    <br><hr><br>
+                        	                </form>
+                        	                <button id="FinishLevel">Terminar nivel</button>
+                        	                <br>
+                        	                <br>
+                        	</div>
+                    	</div>
+
+	                </main>
+	            </div>
+	        </div>
+	</div>
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js" type="text/javascript"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js" type="text/javascript"></script>
+    <script type="text/javascript" src="javascript/ViewLevel.js"></script>
+</body>
+</html>

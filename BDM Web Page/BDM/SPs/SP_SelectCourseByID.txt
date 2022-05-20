@@ -1,0 +1,35 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SelectCourseByID`(
+IN SPV_id_course int)
+BEGIN
+
+	DECLARE SPV_avgRating INT;
+	SET SPV_avgRating = (SELECT avg(rating) FROM t_usercourse WHERE fk_course = SPV_id_course);
+    
+	SELECT 
+    T_Course.id_course, T_Course.title, T_Course.image, T_Course.general_rating, T_Course.level_quantity, T_Course.course_description, SPV_avgRating, 
+    T_User.id_user, T_User.fk_user_name, T_User.user_password, T_User.gender, T_User.email, T_User.photo,
+	T_Name.first_name, T_Name.middle_name, T_Name.last_name, T_Name.second_last_name, 
+    T_Category.category_name
+    FROM T_Course 
+    JOIN T_User ON T_Course.fk_instructor = T_User.id_course 
+    JOIN T_Name ON T_User.fk_user_name = T_Name.id_name
+    JOIN T_CourseCategory ON T_CourseCategory.fk_course = T_Course.id_course
+    JOIN T_Category ON T_CourseCategory.fk_category = T_Category.id_category
+    WHERE T_Course.taken_down IS FALSE AND T_Course.id_course = SPV_id_course;
+END
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_GetCourseByID`(
+IN SPV_idCurso int
+)
+BEGIN
+    
+    SELECT  title, course_description, t_user.userName as Maestro, full_price, level_quantity,t_course.fk_instructor as instructorID, general_rating
+    from T_Course
+    join t_user on t_course.fk_instructor=t_user.id_user
+    join t_name on t_user.fk_user_name = t_name.id_name
+    where t_course.id_course = SPV_idCurso;
+                
+END

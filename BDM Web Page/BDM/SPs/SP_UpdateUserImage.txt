@@ -1,0 +1,10 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_UpdateUserImage`(
+IN SPV_idUser int,
+IN SPV_img	mediumblob)
+BEGIN
+	UPDATE T_User
+    SET photo = SPV_img
+    WHERE id_user = SPV_idUser;
+    
+    SELECT last_insert_id();
+END

@@ -1,0 +1,5 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SelectCategories`()
+BEGIN
+	SELECT id_category, category_name, fk_creator, creation_date, catDescription
+    FROM T_Category;
+END

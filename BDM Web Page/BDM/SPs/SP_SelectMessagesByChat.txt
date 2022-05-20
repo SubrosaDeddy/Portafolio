@@ -1,0 +1,10 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SelectMessagesByChat`(
+IN SPV_idChat	int)
+BEGIN
+	SELECT pk_message, fk_user, msg_description, send_date, concat(T_Name.first_name, " ", T_Name.middle_name, " ", T_Name.last_name, " ", T_Name.second_last_name) AS Fullname
+    FROM T_Message
+    JOIN T_User ON T_Chat.fk_user = T_User.id_user
+    JOIN T_Name ON T_User.fk_user_name = T_Name.id_name
+    WHERE T_Message.fk_chat = SPV_idChat
+    ORDER BY T_Message.send_date DESC;
+END

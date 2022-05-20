@@ -1,0 +1,24 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SelectLevelsByCourse`(
+IN SPV_id_course	int)
+BEGIN
+	SELECT id_level, level_index, level_cost, descripcion 
+	FROM T_Level
+	JOIN t_course on T_level.fk_course=t_course.id_course
+	WHERE T_level.fk_course=SPV_id_course
+	ORDER BY level_index;
+END
+
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_GetLevelByCourse`(
+IN SPV_idCurso int
+)
+BEGIN
+	SELECT id_level, level_index, level_cost, descripcion 
+	FROM T_Level
+	JOIN t_course on T_level.fk_course=t_course.id_course
+    WHERE T_Level.fk_course=SPV_idCurso
+    ORDER BY level_index;
+END

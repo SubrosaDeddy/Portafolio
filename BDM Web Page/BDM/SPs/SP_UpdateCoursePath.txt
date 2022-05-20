@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_UpdateCoursePath`(
+IN SPV_IDCourse	int,
+IN SPV_ImgPath	text)
+BEGIN
+	UPDATE T_Course
+    SET image = SPV_ImgPath
+    WHERE id_course = SPV_IDCourse;
+END

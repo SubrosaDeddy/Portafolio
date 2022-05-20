@@ -1,0 +1,13 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_UpdateUserCourse`(
+IN SPV_id_user_course 		int,
+IN SPV_fk_payment_method	int,
+IN SPV_conclusion_date		date,
+IN SPV_last_entry			date,
+IN SPV_progresss 			int,
+IN SPV_rating				tinyint,
+IN SPV_lastLevelPaid		int)
+BEGIN
+	UPDATE TR_UserCourse 
+    SET fk_payment_method = SPV_fk_payment_method, conclusion_date = SPV_conclusion_date, last_entry = SPV_last_entry, progress = SPV_progresss, rating = SPV_rating, lastLevelPaid = SPV_lastLevelPaid
+    WHERE id_user_course = SPV_id_user_course;
+END

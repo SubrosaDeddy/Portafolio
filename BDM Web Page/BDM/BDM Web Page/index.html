@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCry</title>
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/index.css" as="style">
+    <link rel="stylesheet" href="css/index.css">
+    
+    <link rel="preload" href="css/myCourses.css" as="style">
+    <link rel="stylesheet" href="css/myCourses.css">
+</head>
+<body>
+    <a href="index.html">
+        <h1 class="titulo">UCry</h1>
+    </a>
+    
+    <div class="tabs">
+        <div class="tab-4">
+            <label for="tab4-1">Oferta</label>
+            <input id="tab4-1" name="tabs-two" type="radio" checked="checked">
+            <div>
+                <div class="hero">
+                    <img src="img/hero.jpg" alt="Hero">
+                </div>
+                <main class="contenedor">
+                    <h2>Empieza tu camino hacia el mañana</h2>
+                    <div class="job-offers" id="contenedor-categorias">
+                        <!-- <section class="offer sombra-blanca">
+                            <h3>Bases de Datos</h3>
+                            <p>Donec eu aliquam nibh. Nunc pellentesque purus at nunc semper cursus. Maecenas et odio at magna dapibus sagittis a eget risus.</p>
+                        </section> -->
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <div class="tab-4">
+            <label for="tab4-2">Contacto</label>
+            <input id="tab4-2" name="tabs-two" type="radio">
+            <div>
+                <h4>Contacto</h4>
+                <p>Quisque sit amet turpis leo. Maecenas sed dolor mi. Pellentesque varius elit in neque ornare commodo ac non tellus. Mauris id iaculis quam. Donec eu felis quam. Morbi tristique lorem eget iaculis consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean at tellus eget risus tempus ultrices. Nam condimentum nisi enim, scelerisque faucibus lectus sodales at.</p>
+            </div>
+        </div>
+
+        <div class="tab-4">
+            <label for="tab4-3">Mis cursos</label>
+            <input id="tab4-3" name="tabs-two" type="radio">
+            <div class="contenedor">
+                <div class="video-player sombra-blanca">
+                    <video src=""></video>
+                    <p>Nulla eget feugiat mauris. Vestibulum aliquet leo eu nibh gravida, vitae facilisis mi molestie. Nulla vitae libero vitae tortor pellentesque dictum</p>
+                    <p>Document.docx</p>
+                </div>
+                
+                <section class="level-container">
+                    <div class="level sombra-blanca">
+                        <h2>Level 1</h2>
+                        <p>Nulla eget feugiat mauris. Vestibulum aliquet leo eu nibh gravida, vitae facilisis mi molestie. Nulla vitae libero vitae tortor pellentesque dictum</p>
+                        <p>Document.docx</p>
+                    </div>
+
+                    <div class="level sombra-blanca">
+                        <h2>Level 2</h2>
+                        <p>Nulla eget feugiat mauris. Vestibulum aliquet leo eu nibh gravida, vitae facilisis mi molestie. Nulla vitae libero vitae tortor pellentesque dictum</p>
+                        <p>Document.docx</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="tab-4">
+            <label for="tab4-4" id="user-screen-label">Usuario</label>
+            <input id="tab4-4" name="tabs-two" type="radio">
+            
+            <div class="user sombra-blanca" id="not-logged-user-screen">
+                <h2>Inicia sesión</h2>
+                <!-- <form class="form-login"> -->
+                    <label for="login-username">Nombre de usuario</label><input type="text" id="loginUsername">
+                    <label for="login-password">Contraseña</label><input type="password" id="loginPassword"><br><br>
+                    <button id="btn-login"> Ingresar </button>
+                <!-- </form> -->
+                
+                <hr>
+                
+                <h2>¿No estás registrado?</h2>
+                <h2>Crea una cuenta</h2>
+                <form action="SignUp.php" method="post" id="SignupForm" enctype="multipart/form-data">
+                    <label for="myFile">Imagen de usuario</label>
+                    <div class="user-img">
+                        <img src="img/default-user-image.png" alt="">
+                    </div>
+                    <input type="file" id="signup-profile-photo" name="photo">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h2>Nombre</h2>
+                    <label for="signup-username">Username</label>
+                    <input type="text" id="signup-username" name="username">
+
+                    <label for="signup-name">Primer nombre</label>
+                    <input type="text" id="signup-name" name="name">
+
+                    <label for="signup-second-name">Segundo nombre (opcional)</label>
+                    <input type="text" id="signup-second-name" name="secondName">
+
+                    <label for="signup-last-name">Apellido paterno</label>
+                    <input type="text" id="signup-last-name" name="lastName">
+
+                    <label for="signup-second-last-name">Apellido materno</label>
+                    <input type="text" id="signup-second-last-name" name="secondLastName">
+
+                    <label for="signup-password">Contraseña</label>
+                    <input type="password" id="signup-password" name="password">
+
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" name="email">
+                
+                    <div class="CheckGender">
+                        <div>
+                            <label for="signup-gender">Genero</label>
+                            <select name="singupGender" id="signup-gender">
+                                <option value="Masculine">Maculino</option>
+                                <option value="Femenine">Femenino</option>
+                                <option value="Other">Otro</option>
+                            </select>
+                        </div>
+                    </div> 
+
+                    <div class="CheckType">
+                        <label for="signup-user-type">Tipo de Usuario </label>
+                        <select name="signupType" id="signup-user-type">
+                            <option value="Escuela">Escuela</option>
+                            <option value="Alumno">Alumno</option>
+                        </select>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div>
+                        <button type="submit" id="btn-sign-up"> Registrarme </button>
+                    </div>
+                </form>
+                    
+            </div>
+
+
+            <div class="user sombra-blanca" id="logged-user-screen" hidden>
+                <form class="formUpdateInfo" id="formUpdateInfo">
+                    <label for="myFile">Imagen de usuario</label>
+                    <div class="user-img">
+                        <!-- <img src="img/default-user-image.png" alt="" id="userPic"> -->
+                        <img src="img/userImg.png" alt="" id="userPic">
+                    </div>
+                    <input type="file" id="update-profile-photo" name="photo">
+                    <hr>
+                    <br>
+                    <label>Alumno</label>
+                    <label for="updateUsername" id="lblUsername">Username</label>
+                    <input type="text" placeholder="" id="inputUpdateUsername" name="username">
+
+                    <label for="inputUpdatePasswordOld" id="lblUpdatePasswordOld">Password</label>
+                    <input type="password" id="inputUpdatePasswordOld" name="passwordOld">
+                    <br>
+                    <label for="inputUpdatePasswordNew" id="lblUpdatePasswordNew">New password</label>
+                    <input type="password" id="inputUpdatePasswordNew" name="passwordNew">
+
+                    <label for="inputUpdateFullname" id="lblUpdateFirstName">First name</label>
+                    <input type="text" placeholder="First name" id="inputUpdateFirstName" name="firstName">
+
+                    <label for="inputUpdateMiddleName" id="lblUpdateMiddleName">Middle name</label>
+                    <input type="text" placeholder="Middle name" id="inputUpdateMiddleName" name="middleName">
+
+                    <label for="inputUpdateLastName" id="lblUpdateLastName">Last name</label>
+                    <input type="text" placeholder="Last name" id="inputUpdateLastName" name="lastName">
+
+                    <label for="inputUpdateSecondLastName" id="lblUpdateSecondLastName">Second last name</label>
+                    <input type="text" placeholder="Second last name" id="inputUpdateSecondLastName" name="secondLastName">
+
+                    <label for="inputUpdateEmail" id="lblUpdateEmail">Email</label>
+                    <input type="email" placeholder="" id="inputUpdateEmail" name="email">
+                    <div>
+                        <br><br>
+                        <button type="submit">Actualizar</button>
+                        <br>
+                    </div>
+                </form>
+                <a href="CrearCurso.html" id="btnCrearCurso"><button type="button">Crear curso</button></a>
+                <br><hr>
+
+                <label>Historial de ventas/cursos</label>
+                <!--Si el usuario es una escuela, apareceran los cursos que ha vendido, si es un alumno
+                                apareceran los cursos que ha comprado -->
+                <div id="VentasTable">
+                    <table class="TablaCursos" id="teacherCourseTable">
+                         <tr>
+                            <th></th>
+                            <th>Curso</th>
+                            <th>Alumnos inscritos</th>
+                            <th>Ingresos</th>
+                            <th>Baja/alta curso</th>
+                        </tr>
+                        <!-- <tr>
+                            <td><button>Ver</button></td>
+                            <td>HTML</td>
+                            <td>25</td>
+                            <td>$1500</td>
+                            <td><input type="checkbox" id="" name="" value=""></td>
+                        </tr>
+                        <tr>
+                            <td><button>Ver</button></td>
+                            <td>BD</td>
+                            <td>25</td>
+                            <td>$3000</td>
+                            <td><input type="checkbox" id="" name="" value=""></td>
+                        </tr> -->
+                    </table>
+                    
+                    <br><hr><br>
+                    
+                    <!--Esta tabla actualizara con la informacion al hacer click en ver-->
+                    <table class="TablaCursos" id="teacherStudentsTable">
+                        <!-- <tr>
+                            <th>Alumno</th>
+                            <th>Fecha inscripcion</th>
+                            <th>Avance</th>
+                            <th>Total pagado</th>
+                            <th>Forma_de_pago</th>
+                            <th>Chat</th>
+                            <th>Certificado otorgado</th>
+                        </tr> -->
+                        <!-- <tr>
+                            <td>Angel Rdz</td>
+                            <td>04/10/2021</td>
+                            <td>4/5</td>
+                            <td>$500</td>
+                            <td>credito</td>
+                            <td><a href="ChatView.html"><button>-</button></a></td>
+                            <td><input type="checkbox" id="" name="" value=""></td>
+                        </tr> -->
+                    </table>
+                </div>
+
+                <br><hr><br>
+
+                <div id="CursosTabla">
+                    <table class="TablaCursos" id="StudentCoursesTable">
+                        <tr>
+                            <th>Curso</th>
+                            <th>Progreso</th>
+                            <th>Fecha inscripcion</th>
+                            <th>Ultima actividad</th>
+                            <th>Fecha finalizacion</th>
+                        </tr>
+                        <!-- <tr>
+                            <td>HTML</td>
+                            <td>4/5</td>
+                            <td>04/10/2021</td>
+                            <td>05/10/2021</td>
+                            <td>N/A</td>
+                        </tr>
+                         <tr>
+                            <td>BD</td>
+                            <td>3/7</td>
+                            <td>06/10/2021</td>
+                            <td>07/10/2021</td>
+                            <td>N/A</td>
+                        </tr> -->
+                    </table>
+                </div>
+
+                <button type="button" onclick="closeSession()">Cerrar sesión</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>UCry Online Courses ®</p>
+    </footer>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js" type="text/javascript"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js" type="text/javascript"></script>
+    <script type="text/javascript" src="javascript/login.js"></script>
+</body>
+</html>

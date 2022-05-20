@@ -1,0 +1,48 @@
+.contenedor
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+div.video-player
+{
+    background-color: var(--claro);
+    color: var(--oscuro);
+    text-align: center;
+    margin-bottom: 5rem;
+    padding: 3rem;
+    text-align: center;
+    flex: 0 0 70%;
+}
+
+div.video-player h2
+{
+    color: var(--oscuro);
+}
+
+div.video-player video 
+{
+    width: 100%;
+    height: auto;
+}
+
+section.level-container
+{
+    flex-direction: column;
+    flex: 0 0 30%;
+}
+
+div.level
+{
+    background-color: var(--claro);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+div.level:hover
+{
+    background-color: var(--claroscuro);
+    cursor: pointer;
+}

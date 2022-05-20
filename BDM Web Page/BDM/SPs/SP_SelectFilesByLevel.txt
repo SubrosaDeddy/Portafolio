@@ -1,0 +1,7 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SelectFilesByLevel`(
+IN SPV_id_level	int)
+BEGIN
+	SELECT id_file, fk_level, archivo
+    FROM T_File
+    WHERE fk_level = SPV_id_level;
+END

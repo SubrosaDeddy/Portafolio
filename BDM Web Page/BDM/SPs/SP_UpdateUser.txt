@@ -1,0 +1,24 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_UpdateUser`(
+	IN SPV_id_user			int,
+    IN SPV_first_name		varchar(50),
+    IN SPV_middle_name		varchar(50),
+    IN SPV_last_name		varchar(50),
+    IN SPV_second_last_name	varchar(50),
+    IN SPV_userName			varchar(50),
+	IN SPV_password			varchar(50),
+    IN SPV_email			varchar(50)
+)
+BEGIN
+    DECLARE SPV_fk_name INT;
+	SET SPV_fk_name = (SELECT fk_user_name FROM t_user JOIN t_name ON fk_user_name = id_name WHERE id_user = SPV_id_user);
+    
+    UPDATE T_Name
+    SET first_name = SPV_first_name, middle_name = SPV_middle_name, last_name = SPV_last_name, second_last_name = SPV_second_last_name
+    WHERE id_name = SPV_fk_name;
+    
+	UPDATE T_User
+    SET userName = SPV_userName, user_password = SPV_password, email = SPV_email
+    WHERE id_user = SPV_id_user;
+    
+    SELECT SPV_id_user as "ID";
+END

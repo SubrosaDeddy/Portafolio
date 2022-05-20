@@ -1,0 +1,13 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_InsertCourse`(
+IN SPV_instructorID		int,
+IN SPV_title			text,
+IN SPV_image 			mediumblob,	
+IN SPV_description		text,
+IN SPV_cost				float(13,2),
+IN SPV_levelQuantity	int)
+BEGIN
+	INSERT INTO T_Course(fk_instructor, title, image, general_rating, course_description, full_price, level_quantity, creation_date)
+    VALUES(SPV_instructorID, SPV_title, SPV_image, 0, SPV_description, SPV_cost, SPV_levelQuantity, curdate());
+    
+    SELECT last_insert_id() as "ID";
+END

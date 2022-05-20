@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_GetLiked`(
+IN SPV_idCourse int,
+IN SPV_idUser	int)
+BEGIN
+	SELECT rating
+    FROM TR_UserCourse
+    WHERE fk_course = SPV_idCourse AND fk_user = SPV_idUser;
+END

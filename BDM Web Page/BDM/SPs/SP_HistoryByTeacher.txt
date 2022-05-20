@@ -1,0 +1,9 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_HistoryByTeacher`(
+IN SPV_teacherID	int)
+BEGIN
+	SELECT title, count(tr_usercourse.id_user_course) AS "Estudiantes", sum(amountPaid) AS "Ingresos", id_course, taken_down
+    FROM T_Course
+    JOIN tr_usercourse ON tr_usercourse.fk_course = T_Course.id_course
+    WHERE T_Course.fk_instructor = SPV_teacherID
+    GROUP BY tr_usercourse.fk_course;
+END

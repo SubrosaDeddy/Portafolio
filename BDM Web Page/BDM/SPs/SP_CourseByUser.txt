@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_CourseByUser`(
+IN SPV_userID	int)
+BEGIN
+	SELECT title, concat(progress,"/",level_quantity) as "progress", inscription_date, last_entry, conclusion_date, id_course
+    FROM TR_UserCourse
+    JOIN T_Course ON fk_course = id_course
+    WHERE fk_user = SPV_userID;
+END

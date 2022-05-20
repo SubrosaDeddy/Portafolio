@@ -1,0 +1,10 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_StudentsByCourse`(
+IN SPV_idCourse	int)
+BEGIN
+	SELECT userName, inscription_date, concat(lastLevelPaid, "/", level_quantity) AS "progress", amountPaid, method_name, id_user
+    FROM TR_UserCourse
+    JOIN T_PaymentMethod ON fk_payment_method = id_payment_method
+    JOIN T_Course ON fk_course = id_course
+    JOIN T_User ON fk_user = id_user
+    WHERE fk_course = SPV_idCourse;
+END

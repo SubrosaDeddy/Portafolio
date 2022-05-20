@@ -1,0 +1,9 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_InsertComment`(
+IN SPVcomment_description text,
+IN SPVfk_course int,
+IN SPVfk_user int
+)
+BEGIN
+	INSERT INTO T_Comment(fk_user, fk_course, comment_description, post_date)
+    VALUES(SPVfk_user, SPVfk_course, SPVcomment_description, curdate());
+END

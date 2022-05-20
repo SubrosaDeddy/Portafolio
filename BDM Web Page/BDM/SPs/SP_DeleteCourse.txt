@@ -1,0 +1,7 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_DeleteCourse`(
+IN SPV_courseID	int)
+BEGIN
+	UPDATE T_Course
+    SET taken_down = true
+    WHERE id_course = SPV_courseID;
+END

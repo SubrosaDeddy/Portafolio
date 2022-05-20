@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_SelectLevelByID`(
+IN SPV_idCurso int,
+IN SPV_idLevel int
+)
+BEGIN
+	select  fk_course, videoPath, level_index, level_cost, descripcion from t_level
+    where t_level.fk_course=SPV_idCurso and t_level.id_level=SPV_idLevel;
+END

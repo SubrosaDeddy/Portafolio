@@ -1,0 +1,10 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_InsertFile`(
+IN SPV_levelID	int,
+IN SPV_file	mediumblob
+)
+BEGIN
+	INSERT INTO T_File(fk_level, archivo)
+    VALUES(SPV_levelID, SPV_file);
+    
+    select last_insert_id() AS "ID";
+END

@@ -1,0 +1,21 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_GetCertificadoData`(
+IN SPV_idCurso int,
+IN SPV_idUser int
+)
+BEGIN
+	select Emision, Titulo, Alumno, Maestro 
+	from(
+	SELECT current_date() as Emision, t_course.title as Titulo,
+    GROUP_CONCAT(t_name.first_name, " ", t_name.middle_name, " ", t_name.last_name, " ",t_name.second_last_name) as Alumno
+    from tr_usercourse
+    join t_user on tr_usercourse.fk_user=t_user.id_user
+    join t_name on t_user.fk_user_name=t_name.id_name
+    join t_course on tr_usercourse.fk_course = t_course.id_course
+    where tr_usercourse.fk_course=SPV_idCurso and tr_usercourse.fk_user=SPV_idUser) as A
+    JOIN 
+    (select GROUP_CONCAT(t_name.first_name, " ",t_name.middle_name, " ",t_name.last_name, " ",t_name.second_last_name) as Maestro
+    from t_course
+    join t_user on t_user.id_user=t_course.fk_instructor
+    join t_name on t_user.fk_user_name=t_name.id_name
+    where t_course.id_course=SPV_idCurso) as B;
+END

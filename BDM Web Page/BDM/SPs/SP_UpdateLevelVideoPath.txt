@@ -1,0 +1,8 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `SP_UpdateLevelVideoPath`(
+IN SPV_levelID int,
+IN SPV_path	text)
+BEGIN
+	UPDATE T_Level
+    SET videoPath = SPV_path
+    WHERE id_level = SPV_levelID;
+END
